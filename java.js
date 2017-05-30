@@ -3,7 +3,7 @@
  */
 var arr = new Array();
 $('.next-ball').on('click', function(){
-	var random = Math.floor(Math.random()*10);
+	var random = Math.floor(Math.random()*100);
 	console.log(random);
 	if( arr.indexOf(random) < 1){
 		arr.push(random);
