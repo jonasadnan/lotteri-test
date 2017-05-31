@@ -29,7 +29,7 @@ ul li {
 	font-size: 36px;
 }
 ul li:nth-child(5n) {
-	margin-right: 40px;
+	/*margin-right: 40px; */
 }
 
 .ball-placeholder {
