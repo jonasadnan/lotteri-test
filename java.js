@@ -10,10 +10,11 @@ $('.next-ball').on('click', function(){
 		arr.push(random);
 		$('.lottery').append('<li class="lottery-ball">' + random + '</li>');
 	} else {
-		$('.alert').show();
+		alert("test");
+		$('.alert-container').show();
 
 		setTimeout(function () {
-			$('.alert').show();
+			$('.alert-container').hide();
 		}, 3000);
 	}
 	console.log(arr);

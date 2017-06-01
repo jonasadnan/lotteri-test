@@ -90,3 +90,7 @@ ul li:nth-child(5n) {
 	font-size: 24px;
 	background: #973a5b;
 }
+
+.alert-container {
+	display: none;
+}
