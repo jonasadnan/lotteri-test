@@ -10,7 +10,11 @@ $('.next-ball').on('click', function(){
 		arr.push(random);
 		$('.lottery').append('<li class="lottery-ball">' + random + '</li>');
 	} else {
-		alert(random + ' has already been picked, go again.');
+		$('.alert').show();
+
+		setTimeout(function () {
+			$('.alert').show();
+		}, 3000);
 	}
 	console.log(arr);
 	if ( $('.lottery').children().length > 5 ) {
