@@ -94,3 +94,8 @@ ul li:nth-child(5n) {
 .alert-container {
 	display: none;
 }
+
+.footer.lottery-footer {
+	background-color: #2d2d2d!important;
+	color:white;
+}
