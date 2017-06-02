@@ -1,9 +1,8 @@
 body {
-	background-color: #8a6d3b;;
+	background-color: #8a6d3b;
 	font-family: sans-serif;
 	font-size: 18px;
 	font-weight: 100;
-	background:aquamarine;;
 }
 
 ul {
@@ -77,9 +76,9 @@ ul li:nth-child(5n) {
 
 .next-ball {
 	bottom: 20px;
-	width: 100px;
-	height: 40px;
-	font-size: 16px;
+	width: 200px;
+	height: 80px;
+	font-size: 24px;
 	background: #7ac9ed;
 }
 
