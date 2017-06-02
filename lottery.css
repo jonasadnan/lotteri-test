@@ -100,13 +100,33 @@ ul li {
 }
 
 .ball-container {
-	background-color: #0275d8;
+	border-radius: 50px;
+	border: 1px solid #b9b9b9;
+	background: #feffff;
+	background: -moz-radial-gradient(center, ellipse cover, #feffff 44%, #e8ebed 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #feffff 44%,#e8ebed 100%);
+	background: radial-gradient(ellipse at center, #feffff 44%,#e8ebed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#e8ebed',GradientType=1 );
 	height: 100px;
 	width: 100px;
 	float: left;
 	margin: 5px;
 }
 
-.center {
+.ball {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	border: 1px solid #8c8c8c;
+	display: none;
+	background: #1e5799;
+	background: -moz-linear-gradient(-25deg, #1e5799 0%, #2989d8 49%, #7db9e8 100%);
+	background: -webkit-linear-gradient(-25deg, #1e5799 0%,#2989d8 49%,#7db9e8 100%);
+	background: linear-gradient(-25deg, #1e5799 0%,#2989d8 49%,#7db9e8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
 
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 17px;
 }

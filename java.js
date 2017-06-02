@@ -11,6 +11,15 @@ $('.next-ball').on('click', function(){
 	if( arr.indexOf(random) < 1){
 		arr.push(random);
 		$('.lottery').append('<li class="lottery-ball">' + random + '</li>');
+
+
+
+		$('#ball' + arr.length).addClass('animated');
+		$('#ball' + arr.length).addClass('zoomInDown');
+
+		$('#ball' + arr.length).text(random);
+		$('#ball' + arr.length).show();
+
 	} else {
 		showAlert();
 	}
@@ -41,6 +50,9 @@ $('.next-ball').on('click', function(){
 
 });
 $('.play-again').on('click', function(){
+
+	$('.ball').hide();
+
 	//bouncing out the play-again button
 	$('.play-again').removeClass('bounceInRight');
 	$('.play-again').addClass('bounceOutRight');
