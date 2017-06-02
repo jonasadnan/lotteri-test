@@ -90,10 +90,13 @@ ul li {
 }
 
 .number-container {
-	margin:0 auto;
-	padding: 5px;
-	background-color: red;
-	display: inline-block;
+	margin: auto;
+	width: 70%;
+	min-width: 798px;
+	border: 3px solid #73AD21;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .ball-container {
@@ -101,5 +104,9 @@ ul li {
 	height: 100px;
 	width: 100px;
 	float: left;
-	padding: 5px;
+	margin: 5px;
+}
+
+.center {
+
 }
