@@ -8,14 +8,21 @@ $('.next-ball').on('click', function(){
 
 	var random = Math.floor(Math.random()*lotteryNumbers);
 	console.log(random);
-	if( arr.indexOf(random) < 1){
+	console.log($.inArray(random, arr));
+	if($.inArray(random, arr) < 0){
 		arr.push(random);
-		$('.lottery').append('<li class="lottery-ball">' + random + '</li>');
+
+		$('#ball' + arr.length).addClass('animated');
+		$('#ball' + arr.length).addClass('zoomInDown');
+
+		$('#ball' + arr.length).text(random);
+		$('#ball' + arr.length).show();
+
 	} else {
 		showAlert();
 	}
 	console.log(arr);
-	if ( $('.lottery').children().length > 5 ) {
+	if ( arr.length > 5 ) {
 
 		$('.next-ball').addClass('bounceOutLeft');
 		$('.next-ball').addClass('animated');
@@ -41,6 +48,11 @@ $('.next-ball').on('click', function(){
 
 });
 $('.play-again').on('click', function(){
+
+	arr = [];
+
+	$('.ball').hide();
+
 	//bouncing out the play-again button
 	$('.play-again').removeClass('bounceInRight');
 	$('.play-again').addClass('bounceOutRight');
@@ -51,9 +63,6 @@ $('.play-again').on('click', function(){
 		$('.play-again').removeClass('bounceOutRight');
 	}, 2000);
 
-	$('.lottery').children().remove();
-	arr = [];
-
 	$('.next-ball').show();
 	$('.next-ball').addClass('bounceInLeft');
 	$('.next-ball').addClass('animated');
@@ -63,21 +72,21 @@ $('.play-again').on('click', function(){
 
 
 function showAlert() {
-	$('.alert-container').show();
+	$('.alert.alert-info').show();
 
 	//starting fadeout
 	setTimeout(function () {
-		$('.alert-container').addClass('animated');
-		$('.alert-container').addClass('fadeOut');
+		$('.alert.alert-info').addClass('animated');
+		$('.alert.alert-info').addClass('fadeOut');
 	}, 1500);
 
 	setTimeout(function () {
-		$('.alert-container').hide();
+		$('.alert.alert-info').hide();
 	}, 3000);
 
 	//removing animation class
 	setTimeout(function () {
-		$('.alert-container').removeClass('animated');
-		$('.alert-container').removeClass('fadeOut');
+		$('.alert.alert-info').removeClass('animated');
+		$('.alert.alert-info').removeClass('fadeOut');
 	}, 3000);
 }
